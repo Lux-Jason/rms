@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qiao's Handmade Home</title>
+    <link rel="icon" href="image/webpage/qiao_logo.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <div style="width: 20px;"></div>
+            <a href="index.html"><img src="image/webpage/qiao_logo.svg" alt="Qiao's Handmade" class="logo" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()></a>
+            <div style="width: 20px;"></div>
+            <nav>
+                <a href="index.html" class="button" style="color: #007bff; background-color: white;">Home</a>
+                <a href="menu.php" class="button">All Dishes</a>
+                <a href="reserve_tb.html" class="button">Reserve a table</a>
+            </nav>
+        </div>
+        <div>
+            <button class="button login-btn" onclick="loginNotice()">Login</button>
+            <a href="#" class="button register-btn">register</a>
+        </div>
+    </header>
+
+    <div id="reserved_area" style="height: 32px;"></div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container" style="border-radius: 48px">
+        <div class="mySlides fade">
+            <img src="image/webpage/Qiao's%20Handmade%20pst1.png" style="width:100%; border-radius: 48px;" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+        </div>
+        <div class="mySlides fade">
+            <img src="image/webpage/Qiao's%20Handmade%20pst2.png" style="width:100%; border-radius: 48px;" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+        </div>
+        <div class="mySlides fade">
+            <img src="image/webpage/Qiao's%20Handmade%20pst3.png" style="width:100%; border-radius: 48px;" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <input type="text" name="username" placeholder="User Name" id="username" onfocus="inputFocus(this)" required>
+                <input type="password" name="password" placeholder="Password" id="password" onfocus="inputFocus(this)" required>
+                <button type="submit">Login</button>
+            </form>
+            <p><a href="#">Forget password? </a></p>
+            <p>Haven't got an account? <a href="#">register</a></p>
+        </div>
+    </div>
+
+    <!-- Recommended Dishes -->
+    <section class="recommended-dishes">
+        <h2>Recommended Dishes</h2>
+        <div class="dishes-container" style="margin-left: 3%; margin-right: 3%;">
+            <div class="dish">
+                <img src="image/Strongly%20Spicy%20Chicken.jpg" alt="Hot Spicy Chicken" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Hot Spicy Chicken</div>
+                    <div class="price">$38</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Braised%20Pork.jpg" alt="Braised Pork" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Braised Pork</div>
+                    <div class="price">$45</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Water-Boiled%20Fish.jpg" alt="Water-Boiled Fish" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Water-Boiled Fish</div>
+                    <div class="price">$68</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Kung%20Pao%20Shrimps.jpg" alt="Kung Pao Shrimps" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Kung Pao Shrimps</div>
+                    <div class="price">$58</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Citrus%20Fried%20Beef.jpg" alt="Citrus Fried Beef" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Citrus Fried Beef</div>
+                    <div class="price">$48</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Steamed%20Coconut%20Pork%20Grill.jpg" alt="Steamed Coconut Pork Grill" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Steamed Coconut Pork Grill</div>
+                    <div class="price">$38</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Piquant%20Teriyaki%20Shrimp%20Curry.jpg" alt="Piquant Teriyaki Shrimp Curry" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Piquant Teriyaki Shrimp Curry</div>
+                    <div class="price">$78</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Roasted%20Herb%20Vegetables%20Risotto.jpg" alt="Roasted Herb Vegetables Risotto" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Roasted Herb Vegetables Risotto</div>
+                    <div class="price">$58</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Sautéed%20Sesame%20Fish%20Pizza.jpg" alt="Sautéed Sesame Fish Pizza" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Sautéed Sesame Fish Pizza</div>
+                    <div class="price">$48</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Fried%20Herb%20Tofu%20Pizza.jpg" alt="Fried Herb Tofu Pizza" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Fried Herb Tofu Pizza</div>
+                    <div class="price">$28</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Oven-baked%20Sesame%20Pork%20Skewer.jpg" alt="Oven-baked Sesame Pork Skewer" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Oven-baked Sesame Pork Skewer</div>
+                    <div class="price">$38</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Grilled%20Miso%20Chicken%20Taco.jpg" alt="Grilled Miso Chicken Taco" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Grilled Miso Chicken Taco</div>
+                    <div class="price">$38</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Marinated%20Miso%20Tofu%20Salad.jpg" alt="Marinated Miso Tofu Salad" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Marinated Miso Tofu Salad</div>
+                    <div class="price">$18</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+            <div class="dish">
+                <img src="image/Spicy%20Hoisin%20Fish%20Soup.jpg" alt="Spicy Hoisin Fish Soup" oncontextmenu="return false" onselectstart="return false" ondragstart="return false" onbeforecopy="return false" oncopy=document.selection.empty() onselect=document.selection.empty()>
+                <div class="dish-info">
+                    <div class="name">Spicy Hoisin Fish Soup</div>
+                    <div class="price">$48</div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Information -->
+    <section class="other-information">
+        <h2>About us</h2>
+        <div class="info-container">
+            <div class="info-box">
+                <h3>Running Time: </h3>
+                <p>Monday to Saturday<br>10:00 - 22:00</p>
+            </div>
+            <div class="info-box">
+                <h3>Contact us: </h3>
+                <p>Telephone: 19935820001</p>
+                <p>E-mail: info@qiaohandmade.com</p>
+            </div>
+            <div class="info-box">
+                <h3>Address: </h3>
+                <p>BNU-UIC 2nd D5B-A111</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Qiao's Handmade. All rights reserved</p>
+            <a href="admin.html">Admin Page</a>
+        </div>
+    </footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function loginNotice() {
+        document.getElementById("loginModal").style.display = "block";
+    }
+
+    function closeLoginModal() {
+        document.getElementById("loginModal").style.display = "none";
+    }
+
+    function inputFocus(input) {
+        document.getElementById("username").style.backgroundColor = "white";
+        document.getElementById("password").style.backgroundColor = "white";
+    }
+</script>
+</body>
+</html>
